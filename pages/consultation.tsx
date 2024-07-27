@@ -457,7 +457,7 @@ const page = () => {
         <div className="flex gap-5 justify-between mt-9 w-full text-base tracking-normal leading-6 text-gray-900 max-w-[1110px] max-md:flex-wrap max-md:max-w-full">
           <div className="flex gap-2.5 px-5 my-auto max-md:flex-wrap">
             <div className="flex-auto">
-              © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
+              © 2024 Copyright, All Right Reserved, Made by Anas Ahmed with
             </div>
             <img
               loading="lazy"

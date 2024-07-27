@@ -560,7 +560,7 @@ const page = () => {
             <div className="flex gap-5 justify-between px-px mt-8 w-full text-base tracking-normal leading-6 max-md:flex-wrap max-md:max-w-full">
               <div className="flex gap-3 self-start max-md:flex-wrap">
                 <div className="flex-auto max-md:max-w-full">
-                  © 2024 Copyright, All Right Reserved, Made by Sejal_ui_ux with
+                  © 2024 Copyright, All Right Reserved, Made by Anas Ahmed with
                 </div>
                 <img
                   loading="lazy"
