@@ -57,8 +57,8 @@ const Navbar = ({ textColor }: { textColor: string }) => {
                         {open2 &&
                             <div className={`absolute p-2 grid grid-cols-2 w-80 animate-modal top-8 lg:left-0 -left-24 bg-white text-black shadow-lg rounded-lg`} >
                                 <Link className='p-3  rounded-md hover:bg-slate-200' href="/website">Website</Link>
-                                <Link className='p-3  rounded-md hover:bg-slate-200' href="/product">Product</Link>
-                                <Link className='p-3  rounded-md hover:bg-slate-200' href="/jobs">Jobs</Link>
+                                <Link className='p-3  rounded-md hover:bg-slate-200' href="/ecommerce">Ecommerce</Link>
+                                <Link className='p-3  rounded-md hover:bg-slate-200' href="/subscription">Subscription</Link>
                                 <Link className='p-3  rounded-md hover:bg-slate-200' href="/co-working">Co-working</Link>
                                 <Link className='p-3  rounded-md hover:bg-slate-200' href="/b2b">B2B</Link>
                                 <Link className='p-3  rounded-md hover:bg-slate-200' href="/consultation">Consultation</Link>
