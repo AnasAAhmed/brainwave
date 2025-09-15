@@ -1,10 +1,47 @@
 import Navbar from '@/components/Navbar'
+import { allSeoData } from '@/lib/utils'
+import Head from 'next/head'
 import React from 'react'
 
 const page = () => {
+  const seoData = allSeoData['mobileapp']
   return (
     <>
-    <Navbar textColor='white'/>
+      <Head>
+        {/* Standard SEO */}
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <meta name="keywords" content={[
+          "Borcelle",
+          "digital solutions",
+          "web development",
+          "app development",
+          "ecommerce",
+          "SaaS",
+          "consulting",
+          "B2B",
+          "subscription platforms",
+          "job portals",
+          "co-working solutions",
+          "modern websites",
+          "product development"
+        ].join(", ")} />
+        <meta name="robots" content="index,follow" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content={seoData.url} />
+        <meta property="og:image" content={seoData.image} />
+        <meta property="og:site_name" content="Brainwave.io Next.js by Anas Ahmed" />
+
+        {/* Twitter (extra but recommended) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.image} />
+      </Head>
+      <Navbar textColor='white' />
       <div className="flex flex-col items-center pb-9 bg-white">
         <div className="flex overflow-hidden relative flex-col self-stretch pt-4 w-full min-h-[908px] max-md:max-w-full">
           <img
@@ -13,7 +50,7 @@ const page = () => {
             className="object-cover absolute inset-0 size-full"
           />
           <div className="flex relative z-10 flex-col items-start px-6 w-full max-md:px-5 max-md:max-w-full">
-          
+
             <div className="mt-32 xl:ml-56 text-6xl font-bold tracking-tighter text-white leading-[65px] w-[541px] max-md:mt-10 max-md:max-w-full max-md:text-4xl max-md:leading-10">
               Manage your remote team work
             </div>

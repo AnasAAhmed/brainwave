@@ -1,15 +1,52 @@
 import Navbar from "@/components/Navbar";
+import { allSeoData } from "@/lib/utils";
+import Head from "next/head";
 
 
- const Home = () => {
+const Home = () => {
+  const seoData = allSeoData['homepage']
   return (
     <>
+      <Head>
+        {/* Standard SEO */}
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <meta name="keywords" content={[
+          "Borcelle",
+          "digital solutions",
+          "web development",
+          "app development",
+          "ecommerce",
+          "SaaS",
+          "consulting",
+          "B2B",
+          "subscription platforms",
+          "job portals",
+          "co-working solutions",
+          "modern websites",
+          "product development"
+        ].join(", ")} />
+        <meta name="robots" content="index,follow" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content={seoData.url} />
+        <meta property="og:image" content={seoData.image} />
+        <meta property="og:site_name" content="Brainwave.io Next.js by Anas Ahmed" />
+
+        {/* Twitter (extra but recommended) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.image} />
+      </Head>
       <Navbar textColor="black" />
 
       <div className="flex flex-col items-center bg-white">
         <div className="flex overflow-hidden relative bg-slate-100 flex-col items-center self-stretch px-16 md:px-8 pt-4 pb-20 w-full min-h-[801px] max-md:px-5 max-md:max-w-full">
           <div className="flex relative flex-col mb-7 w-full max-w-[1159px] max-md:max-w-full">
-            
+
             <div className="self-center mt-24 w-full max-w-[1111px]  max-md:mt-10 max-md:max-w-full">
               <div className="flex gap-5 max-md:flex-col max-md:gap-0">
                 <div className="flex flex-col w-[54%] max-md:ml-0 max-md:w-full">
@@ -53,7 +90,7 @@ import Navbar from "@/components/Navbar";
             <div className="flex gap-5 max-md:flex-col max-md:gap-0">
               <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
                 <div className="flex overflow-hidden relative flex-col grow rounded-xl items-center px-11 py-14 text-lg font-bold bg-blue-500 text-white aspect-[0.72] max-md:px-5 max-md:mt-8">
-                <img
+                  <img
                     loading="lazy"
                     src="/home/content-hero.svg"
                     className="max-w-full aspect-[0.81] w-[115px]"
@@ -77,7 +114,7 @@ import Navbar from "@/components/Navbar";
               </div>
               <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
                 <div className="flex overflow-hidden relative flex-col grow items-center px-11 py-12 text-lg font-bold rounded-xl bg-green-500 text-white aspect-[0.72] max-md:px-5 max-md:mt-8">
-                <img
+                  <img
                     loading="lazy"
                     src="/home/content-hero.svg"
                     className="max-w-full aspect-[0.81] w-[115px]"

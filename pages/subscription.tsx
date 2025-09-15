@@ -1,9 +1,46 @@
 import Navbar from '@/components/Navbar'
+import { allSeoData } from '@/lib/utils'
+import Head from 'next/head'
 import React from 'react'
 
 const page = () => {
+  const seoData = allSeoData['subscription']
   return (
     <>
+      <Head>
+        {/* Standard SEO */}
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <meta name="keywords" content={[
+          "Borcelle",
+          "digital solutions",
+          "web development",
+          "app development",
+          "ecommerce",
+          "SaaS",
+          "consulting",
+          "B2B",
+          "subscription platforms",
+          "job portals",
+          "co-working solutions",
+          "modern websites",
+          "product development"
+        ].join(", ")} />
+        <meta name="robots" content="index,follow" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content={seoData.url} />
+        <meta property="og:image" content={seoData.image} />
+        <meta property="og:site_name" content="Brainwave.io Next.js by Anas Ahmed" />
+
+        {/* Twitter (extra but recommended) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.image} />
+      </Head>
       <Navbar textColor='black' />
 
       <div className="flex flex-col items-center pt-6 pb-20 bg-white">

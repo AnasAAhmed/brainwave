@@ -2,10 +2,10 @@ import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 
 const Navbar = ({ textColor }: { textColor: string }) => {
+    const [lastScrollY, setLastScrollY] = useState(0);
     const [scrolled, setScrolled] = useState(false);
     const [open, setOpen] = useState(false);
     const [open2, setOpen2] = useState(false);
-    const [lastScrollY, setLastScrollY] = useState(0);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const toggleOpen = () => setOpen2(!open2);
     const toggleClose = () => setOpen(false);
